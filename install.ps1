@@ -41,6 +41,12 @@ foreach ($tool in $tools) { scoop install $tool }
 scoop bucket add nerd-fonts
 scoop install JetBrainsMono-NF
 
+# IdeaVim
+Write-Host "IdeaVim..." -ForegroundColor Yellow
+Copy-Item -Path "$PSScriptRoot\ideavim\.ideavimrc" `
+          -Destination "$env:USERPROFILE\" -Force
+Write-Host "✓ IdeaVim" -ForegroundColor Green
+
 Write-Host ""
 Write-Host "✓ Semua selesai!" -ForegroundColor Cyan
 Write-Host "Buka nvim → plugin lazy.nvim otomatis terinstall"
