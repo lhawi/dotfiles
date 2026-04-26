@@ -8,6 +8,7 @@ Setup pribadi untuk Windows 10.
 - **PowerShell** — Oh My Posh dengan tema Catppuccin
 - **Windows Terminal** — transparansi + Catppuccin color scheme
 - **Oh My Posh** — tema Catppuccin
+- **IdeaVim** — config untuk IntelliJ IDEA / Android Studio / WebStorm
 
 ## Install di laptop baru
 ```powershell
