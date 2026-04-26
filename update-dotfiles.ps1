@@ -28,6 +28,12 @@ if ($wtPath) {
     Write-Host "✓ Windows Terminal" -ForegroundColor Green
 }
 
+# Oh My Posh theme
+Write-Host "Oh My Posh..." -ForegroundColor Yellow
+Copy-Item -Path "$env:LOCALAPPDATA\Programs\oh-my-posh\themes\catppuccin.omp.json" `
+          -Destination ".\oh-my-posh\" -Force
+Write-Host "✓ Oh My Posh" -ForegroundColor Green
+
 # IdeaVim
 Write-Host "IdeaVim..." -ForegroundColor Yellow
 Copy-Item -Path "$env:USERPROFILE\.ideavimrc" `

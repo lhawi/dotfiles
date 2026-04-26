@@ -41,6 +41,14 @@ foreach ($tool in $tools) { scoop install $tool }
 scoop bucket add nerd-fonts
 scoop install JetBrainsMono-NF
 
+# Oh My Posh theme
+Write-Host "Oh My Posh theme..." -ForegroundColor Yellow
+$opmDest = "$env:LOCALAPPDATA\Programs\oh-my-posh\themes"
+if (!(Test-Path $opmDest)) { New-Item -Path $opmDest -ItemType Directory -Force }
+Copy-Item -Path "$PSScriptRoot\oh-my-posh\catppuccin.omp.json" `
+          -Destination $opmDest -Force
+Write-Host "✓ Oh My Posh" -ForegroundColor Green
+
 # IdeaVim
 Write-Host "IdeaVim..." -ForegroundColor Yellow
 Copy-Item -Path "$PSScriptRoot\ideavim\.ideavimrc" `
