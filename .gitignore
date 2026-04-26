@@ -1,0 +1,12 @@
+@"
+# Lazy.nvim cache (tidak perlu dibackup)
+nvim/.repro/
+nvim/plugin/
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+"@ | Out-File .gitignore -Encoding utf8
