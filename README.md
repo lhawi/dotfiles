@@ -1,5 +1,5 @@
 @"
-# Dotfiles — L Ackerman
+# Dotfiles — lhawi
 
 Setup pribadi untuk Windows 10.
 
@@ -12,7 +12,7 @@ Setup pribadi untuk Windows 10.
 
 ## Install di laptop baru
 ```powershell
-git clone https://github.com/LAckerman/dotfiles.git
+git clone https://github.com/lhawi/dotfiles.git
 cd dotfiles
 .\install.ps1
 ```
