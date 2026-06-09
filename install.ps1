@@ -55,6 +55,16 @@ Copy-Item -Path "$PSScriptRoot\ideavim\.ideavimrc" `
           -Destination "$env:USERPROFILE\" -Force
 Write-Host "✓ IdeaVim" -ForegroundColor Green
 
+# VSCode
+Write-Host "VSCode..." -ForegroundColor Yellow
+$vscodeDest = "$env:APPDATA\Code\User"
+if (!(Test-Path $vscodeDest)) { New-Item -Path $vscodeDest -ItemType Directory -Force }
+Copy-Item -Path "$PSScriptRoot\vscode\settings.json" `
+          -Destination $vscodeDest -Force
+Copy-Item -Path "$PSScriptRoot\vscode\keybindings.json" `
+          -Destination $vscodeDest -Force
+Write-Host "✓ VSCode" -ForegroundColor Green
+
 Write-Host ""
 Write-Host "✓ Semua selesai!" -ForegroundColor Cyan
 Write-Host "Buka nvim → plugin lazy.nvim otomatis terinstall"

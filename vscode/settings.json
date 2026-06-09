@@ -1,0 +1,55 @@
+{
+
+    // ─── VSCodeVim core ───────────────────────────────────────────
+    "vim.enable": true,
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": false,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.surround": true,
+    "vim.easymotion": true,
+    "vim.foldfix": true,
+    "editor.lineNumbers": "relative",
+    "editor.cursorSurroundingLines": 8,
+    "extensions.experimental.affinity": { "vscodevim.vim": 1 },
+
+    // ─── Insert mode ──────────────────────────────────────────────
+    "vim.insertModeKeyBindings": [
+        { "before": ["i", "i"], "after": ["<Esc>"] },
+        { "before": ["j", "k"], "after": ["<Esc>"] },
+        { "before": ["k", "j"], "after": ["<Esc>"] }
+    ],
+
+    // ─── Visual mode ──────────────────────────────────────────────
+    "vim.visualModeKeyBindings": [
+        { "before": ["j", "k"], "after": ["<Esc>"] },
+        { "before": ["k", "j"], "after": ["<Esc>"] },
+        { "before": ["<leader>", "y"], "after": ["\"", "+", "y"] },
+        { "before": ["<leader>", "x"], "after": ["\"", "+", "d"] },
+        { "before": ["<leader>", "p"], "after": ["\"", "+", "p"] },
+        { "before": ["<leader>", "P"], "after": ["\"", "+", "P"] },
+        { "before": ["<leader>", "d"], "after": ["<C-d>"] },
+        { "before": ["<leader>", "u"], "after": ["<C-u>"] }
+    ],
+
+    // ─── Normal mode ──────────────────────────────────────────────
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["<S-Enter>"],              "after": ["O", "<Esc>"] },
+        { "before": ["<CR>"],                   "after": ["o", "<Esc>"] },
+        { "before": ["<leader>", "y"],          "after": ["\"", "+", "y", "y"] },
+        { "before": ["<leader>", "x"],          "after": ["\"", "+", "d", "d"] },
+        { "before": ["<leader>", "p"],          "after": ["\"", "+", "p"] },
+        { "before": ["<leader>", "P"],          "after": ["\"", "+", "P"] },
+        { "before": ["<leader>", "d"],          "after": ["<C-d>"] },
+        { "before": ["<leader>", "u"],          "after": ["<C-u>"] },
+        { "before": ["<leader>", "h"],          "commands": ["workbench.action.previousEditor"] },
+        { "before": ["<leader>", "l"],          "commands": ["workbench.action.nextEditor"] },
+        { "before": ["<leader>", "b", "d"],     "commands": ["workbench.action.closeActiveEditor"] },
+        { "before": ["<leader>", "i"],          "commands": ["editor.action.sourceAction"] },
+        { "before": ["<leader>", "m"],          "commands": ["workbench.view.scm"] },
+        { "before": ["<leader>", "s"],          "commands": ["workbench.action.selectTheme"] },
+        { "before": ["<leader>", "/"],          "commands": ["editor.action.showHover"] },
+        { "before": ["<leader>", "e"],          "commands": ["editor.action.marker.nextInFiles"] },
+        { "before": ["<leader>", "<leader>"],   "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditor"] }
+    ]
+}

@@ -40,6 +40,14 @@ Copy-Item -Path "$env:USERPROFILE\.ideavimrc" `
           -Destination ".\ideavim\" -Force
 Write-Host "✓ IdeaVim" -ForegroundColor Green
 
+# VSCode
+Write-Host "VSCode..." -ForegroundColor Yellow
+Copy-Item -Path "$env:APPDATA\Code\User\settings.json" `
+          -Destination ".\vscode\" -Force
+Copy-Item -Path "$env:APPDATA\Code\User\keybindings.json" `
+          -Destination ".\vscode\" -Force
+Write-Host "✓ VSCode" -ForegroundColor Green
+
 # Push ke GitHub
 Write-Host ""
 Write-Host "Pushing to GitHub..." -ForegroundColor Cyan
