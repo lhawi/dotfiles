@@ -11,7 +11,8 @@ Setup pribadi untuk Windows 10.
 | **Windows Terminal** | Transparansi + Catppuccin color scheme |
 | **Oh My Posh** | Tema Catppuccin |
 | **IdeaVim** | Config untuk IntelliJ IDEA / Android Studio / WebStorm |
-| **VSCode** | Settings & keybindings |
+| **VSCode** | Settings & keybindings (VSCodeVim) |
+| **Obsidian** | Vim keybindings via obsidian-vimrc plugin |
 
 ## Install di laptop baru
 
@@ -44,6 +45,7 @@ dotfiles/
 ├── oh-my-posh/         # Tema Catppuccin
 ├── ideavim/            # .ideavimrc
 ├── vscode/             # settings.json & keybindings.json
+├── obsidian/           # .obsidian.vimrc
 ├── install.ps1         # Setup laptop baru
 └── update-dotfiles.ps1 # Sync config → repo → GitHub
 ```
